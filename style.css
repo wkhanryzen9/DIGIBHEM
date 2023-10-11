@@ -1,0 +1,335 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+    background-image: url('/img/Hotel.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow-x: hidden;
+}
+
+.wrapper{
+    width: 100%;
+    height: 100%; 
+}
+
+.nav-bar{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1vw 2vw;
+}
+
+.nav-bar-right{
+    display: flex;
+    align-items: center;
+}
+.nav-bar-left h1{
+    color: #fff;
+    font-family: 'Dancing Script', cursive;
+    font-weight: 600;
+    border-right: 3px solid #2B3B48;
+    padding-right: 1vw;
+}
+.nav-bar-right i{
+    cursor: pointer;
+    font-size: 2vw;
+    font-weight: 600;
+    color: #fff;
+}
+
+.sidebar{
+    position: absolute;
+    height: 100%;
+    width: 250px;
+    background-color: #fff;
+    opacity: 0.5;
+    top: 0;
+    right: 0;
+    right: -250px;
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+    padding-left: 3vw;
+    transition: all 0.3s ease-in-out;
+}
+.sidebar i{
+    cursor: pointer;
+    font-size: 3vw;
+    position: absolute;
+    left: 0;
+}
+.sidebar a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+    z-index: 9;
+    font-size: 2vw;
+    transition: 0.3s;
+}
+.sidebar a:hover{
+    transform: scale(1.05);
+}
+.sidebar h1{
+    margin-top: 3vw;
+    letter-spacing: 1.5vw;
+    font-weight: 700;
+}
+
+#hero{
+    width: 100%;
+    height: calc(100% - 80px);
+    display: flex;
+}
+
+#hero-left{
+    width: 50%;
+    height: 100%;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    margin: 9vw 1vw 0vw 2vw;
+}
+.content h1{
+    color: rgb(30, 30, 30);
+    font-size: 4vw;
+    font-weight: 700;
+}
+.content h1 span{
+    color: #2B3B48;
+}
+.content h3{
+    color: #fff;
+}
+.content h3 span{
+    color: #2B3B48;
+}
+#booking-btn{
+    cursor: pointer;
+    margin-top: 2vw;
+    width: 25%;
+    padding: 0.8vw 1.8vw;
+    font-size: 1.5vw;
+    border: none;
+    background-color: #2B3B48;
+    color: #fff;
+    border-radius: 30px;
+    border: 4px solid #2B3B48;
+    transition: 0.4s;
+}
+#booking-btn:hover{
+    background-color: transparent;
+    /* color: #81bcf1; */
+}
+
+
+#hero-right{
+    width: 50%;
+    height: 100%;
+}
+
+.booking-form{
+    display: none;
+    width: 400px;
+    height: 550px;
+    overflow-y: scroll;
+    position: absolute;
+    top: 5%;
+    left: 36%;
+    background-color: #fff;
+    padding: 2vw 1.5vw;
+    border-radius: 10px;
+}
+
+.booking-form h3{
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.8vw;
+    border-bottom: 4px solid #2B3B48;
+    padding-bottom: 2px;
+}
+.text-field{
+    margin-bottom: 10px;
+}
+.text-field label{
+    font-weight: 600;
+}
+.text-field input{
+    margin-top: 4px;
+    width: 100%;
+    padding: 4px 6px;
+    outline: none;
+    border: none;
+    box-shadow: 0px 0px 5px rgb(146, 146, 146);
+}
+.rooms > span{
+    font-size: 1.5vw;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-right: 7px;
+    font-weight: 600;
+    border-right: 3px solid #2b3b48;
+}
+.rooms-type{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0.8vw 1vw;
+}
+.rooms-type input{
+    margin-right: 6px;
+}
+.rooms-type span{
+    font-size: 1vw;
+}
+.amenities{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0.8vw 1vw;
+}
+.amenities span{
+    font-size: 1vw;
+}
+.amenities input{
+    margin-right: 6px;
+}
+.opt-btn{
+    display: flex;
+    align-items: center;
+}
+
+#advance{
+    margin-bottom: 10px;
+}
+#advance label{
+    font-weight: 600;
+}
+#advance input{
+    margin-top: 4px;
+    width: 100%;
+    padding: 4px 6px;
+    outline: none;
+    border: none;
+    box-shadow: 0px 0px 5px rgb(146, 146, 146);
+}
+.button-container{
+    display: flex;
+    justify-content: center;
+}
+#register-btn{
+    margin-top: 1vw;
+    text-align: center;
+    padding: 1vw;
+    border: none;
+    background-color: #2B3B48;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 30px;
+}
+
+#popup{
+    display: none;
+    position: absolute;
+    bottom: 2%;
+    right: 1%;
+    width: 200px;
+    background-color: #fff;
+    padding: 1vw 1.5vw;
+    border-radius: 25px;
+}
+#popup-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+#popup h2{
+    font-weight: 600;
+}
+#popup i{
+    font-weight: 600;
+    font-size: 2vw;
+    color: black;
+}
+#form-close{
+    cursor: pointer;
+    color: #2B3B48;
+    font-size: 2vw;
+    position: absolute;
+    top: 1%;
+    left: 2%;
+    font-weight: 600;
+}
+
+
+@media (max-width: 600px) {
+    #hero{
+        display: block;
+        height: calc(100% - 80px);
+    }
+    #hero-left{
+        width: 100%;
+        height: 100%;
+    }
+    #hero-left .content{
+        height: 100%;
+    }
+    .content h1{
+        font-size: 2.2rem;
+    }
+    .content h3{
+        margin-bottom: 5vw;
+    }
+    #booking-btn{
+        font-size: 1.3rem;
+        width: 40%;
+        padding: 1vw 2vw;
+    }
+    #hero-right{
+        width: 0;
+    }
+    .nav-bar-left h1{
+        font-size: 1.8rem;
+        padding-right: 3vw;
+    }
+    .nav-bar-right i{
+        font-size: 1.8rem;
+        margin-right: 8px;
+    }
+    .booking-form{
+        left: 6%;
+        width: 90%;
+        padding-top: 5vw;
+    }
+    #form-close{
+        font-size: 1.5rem;
+    }
+    .booking-form h3{
+        font-size: 1.5rem;
+    }
+    .opt-btn span{
+        font-size: 0.8rem;
+    }
+    .rooms > span{
+        font-size: 1.2rem;
+        margin-bottom: 1.5rem;
+    }
+    #register-btn{
+        padding: 1.5vw 3vw;
+    }
+    #popup{
+        padding: 1vw 2vw;
+    }
+    #popup i{
+        font-size: 1.5rem;
+    }
+}
