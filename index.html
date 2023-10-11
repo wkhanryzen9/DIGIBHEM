@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+    <link rel="manifest" href="/img/site.webmanifest">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@600&family=Poppins:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Holiday Inn - Hotel</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="nav-bar">
+            <div class="nav-bar-left">
+                <h1>Holiday Inn</h1>
+            </div>
+            <div class="nav-bar-right">
+                <i id="menu-btn" class="ri-menu-line"></i>
+            </div>
+        </div>
+        <div class="sidebar">
+            <i class="ri-close-line"></i>
+            <h1>MENU</h1>
+            <a href="#">Home</a>
+            <a href="#">Services</a>
+            <a href="#">Contact Us</a>
+            <a href="#">About Us</a>
+        </div>
+        <div id="hero">
+            <div id="hero-left">
+                <div class="content">
+                    <h3>The new defination of <span>Luxury</span>.</h3>
+                    <h1>ENJOY YOUR <span>DREAM</span> VACATION.</h1>
+                    <h3>FLAT 50% Discount on all <span>HOTELS</span>.</h3>
+                    <button id="booking-btn">Book Now</button>
+                </div>
+            </div>
+            <div id="hero-right">
+                <form class="booking-form" action="javascript:void(0);" method="POST" seamless="yes"><i id="form-close"
+                        class="ri-close-line"></i>
+                    <h3>Booking Information</h3>
+                    <div class="text-field">
+                        <label>Your Name</label><br>
+                        <input type="text" id="yourName" name="yourName" required>
+                    </div>
+                    <div class="text-field">
+                        <label>Check-in Date</label><br>
+                        <input type="text" id="checkIn" onfocus="this.type='date'" onfocusout="this.type='text'"
+                            name="checkIn" required>
+                    </div>
+                    <div class="text-field">
+                        <label>Days</label><br>
+                        <input type="number" id="days" name="days" required>
+                    </div>
+                    <div class="text-field">
+                        <label>Adults</label><br>
+                        <input type="number" id="adults" name="adults">
+                    </div>
+
+                    <h3>Room Information</h3>
+                    <div class="rooms">
+                        <span>Rooms</span><br />
+                        <div class="rooms-type">
+                            <div class="delux">
+                                <img src="/img/deluxroom.jfif" width="100px" height="100px"
+                                    style="border-radius:5px;"><br />
+                                <div class="opt-btn"><input type="radio" name="roomType" value="Delux"
+                                        required><span>Delux - 2500/-</span></div>
+                            </div>
+                            <div class="suite">
+                                <img src="/img/suiteroom.webp" width="100px" height="100px"
+                                    style="border-radius:5px;"><br />
+                                <div class="opt-btn"><input type="radio" name="roomType" value="Suite"><span>Suite -
+                                        4000/-</span></div>
+                            </div>
+                        </div>
+                        <span>Amenities</span><br />
+                        <div class="amenities">
+                            <div class="ac">
+                                <img src="/img/ac.jpg" width="100px" height="100px" style="border-radius:5px;"><br />
+                                <div class="opt-btn"><input type="checkbox" name="amenities" value="AC"
+                                        required><span>AC - 1000/-</span></div>
+                            </div>
+                            <div class="locker">
+                                <img src="/img/locker.webp" width="100px" height="100px"
+                                    style="border-radius:5px;"><br />
+                                <div class="opt-btn"><input type="checkbox" name="amenities" value="Locker"><span>Locker
+                                        - 300/-</span></div>
+                            </div>
+                        </div>
+                        <h3>Advanced Payment</h3>
+                        <div id="advance">
+                            <label>Advance Amount</label><br>
+                            <input type="number" id="advanceAmount" name="advanceAmount" required>
+                        </div>
+                    </div>
+                    <div class="button-container">
+                        <button id="register-btn">REGISTER</button>
+                    </div>
+                </form>
+            </div>
+            <div id="popup">
+                <div id="popup-content">
+                    <h2>Registered</h2>
+                    <i id="popup-close" class="ri-close-line"></i>
+                    <p id="TA">TotalAmount</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
