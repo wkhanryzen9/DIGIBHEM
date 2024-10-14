@@ -8,15 +8,16 @@
 html, body{
     width: 100%;
     height: 100%;
-    background-image: url('hotel.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 .wrapper{
+    position: relative;
     width: 100%;
-    height: 100%; 
+    height: 100vh;
+    background-image: url('/img/Hotel.jpg');
+    background-size: cover;
+    background-position: center;
+    overflow-x: hidden; 
 }
 
 .nav-bar{
@@ -49,12 +50,11 @@ html, body{
 .sidebar{
     position: absolute;
     height: 100%;
-    width: 250px;
+    width: 20%;
     background-color: #fff;
     opacity: 0.5;
     top: 0;
-    right: 0;
-    right: -250px;
+    right: -20%;
     display: flex;
     flex-direction: column;
     gap: 2vw;
@@ -270,65 +270,23 @@ html, body{
 }
 
 
-@media (max-width: 600px) {
+@media (max-width: 500px) {
+    body{
+        overflow-x: hidden;
+        background-image: none
+    }
+    .wrapper{
+        overflow-x: hidden;
+    }
     #hero{
         display: block;
-        height: calc(100% - 80px);
     }
     #hero-left{
         width: 100%;
         height: 100%;
     }
-    #hero-left .content{
-        height: 100%;
-    }
-    .content h1{
-        font-size: 2.2rem;
-    }
-    .content h3{
-        margin-bottom: 5vw;
-    }
-    #booking-btn{
-        font-size: 1.3rem;
-        width: 40%;
-        padding: 1vw 2vw;
-    }
     #hero-right{
         width: 0;
-    }
-    .nav-bar-left h1{
-        font-size: 1.8rem;
-        padding-right: 3vw;
-    }
-    .nav-bar-right i{
-        font-size: 1.8rem;
-        margin-right: 8px;
-    }
-    .booking-form{
-        left: 6%;
-        width: 90%;
-        padding-top: 5vw;
-    }
-    #form-close{
-        font-size: 1.5rem;
-    }
-    .booking-form h3{
-        font-size: 1.5rem;
-    }
-    .opt-btn span{
-        font-size: 0.8rem;
-    }
-    .rooms > span{
-        font-size: 1.2rem;
-        margin-bottom: 1.5rem;
-    }
-    #register-btn{
-        padding: 1.5vw 3vw;
-    }
-    #popup{
-        padding: 1vw 2vw;
-    }
-    #popup i{
-        font-size: 1.5rem;
+        height: 0;
     }
 }
