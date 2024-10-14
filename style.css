@@ -14,7 +14,7 @@ html, body{
     position: relative;
     width: 100%;
     height: 100vh;
-    background-image: url('/img/hotelnew.jpg');
+    background-image: url('hotelnew.jpg');
     background-size: cover;
     background-position: center;
     overflow-x: hidden; 
