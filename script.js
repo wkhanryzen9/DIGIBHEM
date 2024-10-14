@@ -5,15 +5,18 @@ let close = document.querySelector('.sidebar i');
 let form = document.querySelector(".booking-form");
 let formClose = document.querySelector('#form-close');
 let book = document.querySelector('#booking-btn');
-
+let overlay =document.querySelector('.overlay');
+const mediaQuery = window.matchMedia("(max-width: 500px)");
 // Initialize roomRate as 0
 let roomRate = 0;
 
 book.addEventListener('click', function () {
     form.style.display = 'block'
+    overlay.style.display = 'block';
 })
 formClose.addEventListener('click', function () {
     form.style.display = 'none';
+    overlay.style.display = 'none';
 })
 
 const roomValue = {
@@ -27,13 +30,27 @@ const comfortValue = {
 };
 
 menu.addEventListener('click', function () {
-    sidebar.style.right = '0';
-    menu.style.color = 'transparent';
+    if (mediaQuery.matches){
+        sidebar.style.right = '0';
+        menu.style.color = 'transparent';
+        overlay.style.display = 'block';
+    }
+    else{
+        sidebar.style.right = '0';
+        menu.style.color = 'transparent';
+    }
 });
 
 close.addEventListener('click', function () {
-    sidebar.style.right = '-20%';
-    menu.style.color = '#fff';
+    if (mediaQuery.matches){
+        sidebar.style.right = '-70%';
+        menu.style.color = '#fff';
+        overlay.style.display = 'none';
+    }
+    else{
+        sidebar.style.right = '-20%';
+        menu.style.color = '#fff';
+    }
 });
 
 function calculateTotalAmount() {
@@ -95,3 +112,4 @@ function analyseData() {
         roomRate = roomValue[roomType.value];
     }
 }
+
