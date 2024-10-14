@@ -32,7 +32,7 @@ menu.addEventListener('click', function () {
 });
 
 close.addEventListener('click', function () {
-    sidebar.style.right = '-250px';
+    sidebar.style.right = '-20%';
     menu.style.color = '#fff';
 });
 
