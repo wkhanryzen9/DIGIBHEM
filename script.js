@@ -7,7 +7,6 @@ let formClose = document.querySelector('#form-close');
 let book = document.querySelector('#booking-btn');
 let overlay =document.querySelector('.overlay');
 const mediaQuery = window.matchMedia("(max-width: 500px)");
-// Initialize roomRate as 0
 let roomRate = 0;
 
 book.addEventListener('click', function () {
@@ -48,7 +47,7 @@ close.addEventListener('click', function () {
         overlay.style.display = 'none';
     }
     else{
-        sidebar.style.right = '-20%';
+        sidebar.style.right = '-70%';
         menu.style.color = '#fff';
     }
 });
@@ -112,4 +111,5 @@ function analyseData() {
         roomRate = roomValue[roomType.value];
     }
 }
+
 
